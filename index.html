@@ -18,10 +18,29 @@
     <title>Document</title>
     <!-- <script src="main.js"></script> -->
 </head>
-<body>
-        <h2>What Can JavaScript Do?</h2>
-        <p id="demo">JavaScript can change HTML content.</p>
-        <button type="button" onclick="document.getElementById('demo').innerHTML = 'Hello JavaScript!'">Click Me!</button>
+<body onload="showDate()">
+
+<h1 id="heading"> Learning something</h1>
+<button onclick="changeText(this)">Click Me</button>
+
+<h1 id="time"></h1>
+<button onmouseove="showDate()">Show Date</button>
+
+<script>
+
+function changeText(){
+    var heading = document.getElementById('heading');
+    heading.innerHTML = 'This is awesome';
+}
+
+function showDate(){
+    var time = document.getElementById('time');
+    time.innerHTML = Date();
+}
+    
+
+</script>
+
 </body>
 </html>
 
