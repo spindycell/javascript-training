@@ -20,11 +20,13 @@
 </head>
 <body onload="showDate()">
 
-<h1 id="heading"> Learning something</h1>
+<h1 id="heading">Learning something</h1>
 <button onclick="changeText(this)">Click Me</button>
+<button onclick="normal(this)">back</button>
 
 <h1 id="time"></h1>
-<button onmouseove="showDate()">Show Date</button>
+<button onclick="showDate()">Show Date</button>
+<button onclick="clearDate()">hidden Date</button>
 
 <script>
 
@@ -33,17 +35,25 @@ function changeText(){
     heading.innerHTML = 'This is awesome';
 }
 
+function normal(){
+    var heading = document.getElementById('heading');
+    heading.innerHTML = 'Learning something';
+}
+
 function showDate(){
     var time = document.getElementById('time');
     time.innerHTML = Date();
 }
     
+function clearDate(){
+    var time = document.getElementById('time');
+    time.innerHTML = '';
+}
 
 </script>
 
 </body>
 </html>
-
 
 
 <!-- // ░░   ▄▀▀▀▄░░░
