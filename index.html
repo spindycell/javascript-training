@@ -16,11 +16,32 @@
 <html lang="en">
 <head>
     <title>Document</title>
-    <!-- <script src="main.js"></script> -->
+    <script src="main.js"></script>
+    <style>
+        .a {
+            margin: 0 auto;
+        }
+        .b {
+            margin-bottom: 0 0 0 0;
+        }
+    </style>
+    
+    <style>
+        .container {
+            display : flex;
+        }
+        .text {
+            flex: 1;
+            background-color: aqua;
+        }
+        .button {
+            flex: none;
+        }
+    </style>
 </head>
-<body onload="showDate()">
-
-<h1 id="heading">Learning something</h1>
+<!-- <body onload="showDate()"> -->
+<body>
+<!-- <h1 id="heading">Learning something</h1>
 <button onclick="changeText(this)">Click Me</button>
 <button onclick="normal(this)">back</button>
 
@@ -28,29 +49,14 @@
 <button onclick="showDate()">Show Date</button>
 <button onclick="clearDate()">hidden Date</button>
 
-<script>
+<h2 id="hasil"></h2>
+<button onclick="arrayz()">hidden Date</button> -->
 
-function changeText(){
-    var heading = document.getElementById('heading');
-    heading.innerHTML = 'This is awesome';
-}
+<div class='container'>
+        <div class='text'>Some text goes here</div>
+        <button class='button'>Button</button>
+    </div>
 
-function normal(){
-    var heading = document.getElementById('heading');
-    heading.innerHTML = 'Learning something';
-}
-
-function showDate(){
-    var time = document.getElementById('time');
-    time.innerHTML = Date();
-}
-    
-function clearDate(){
-    var time = document.getElementById('time');
-    time.innerHTML = '';
-}
-
-</script>
 
 </body>
 </html>
